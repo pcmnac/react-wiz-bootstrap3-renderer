@@ -7,7 +7,7 @@
 // } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
-import * as bs3 from '../src/bs3Renderer.js';
+import * as bs3 from '../src';
 
 describe('Boilerplate', function () {
   it('should do boilerplate things', function () {
