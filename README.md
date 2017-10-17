@@ -1,10 +1,10 @@
 
-# react-wizard
+# react-wizard-bootstrap3-renderer
 
-Style-free wizard component for React apps.
+Bootstrap 3 renderer for @pcmnac/react-wizard(https://github.com/pcmnac/react-wizard)
 
 
 ## License
 
-*react-wizard* is available under MIT. See LICENSE for more details.
+*react-wizard-bootstrap3-renderer* is available under MIT. See LICENSE for more details.
 
