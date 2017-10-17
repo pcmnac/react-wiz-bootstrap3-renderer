@@ -22,8 +22,8 @@ export function createRenderer(userOptions = {}) {
             tab(step, index, current, hideNumbers, changeStep),
         stepsContainer: (steps) => 
             stepsContainer(steps),
-        step: (step, index, current, setStepActiveStatus, isStepActive, stateManager) =>
-            renderStep(step, index, current, setStepActiveStatus, isStepActive, stateManager),
+        step: (stepData, index, current, setStepActiveStatus, isStepActive, stateManager) =>
+            renderStep(stepData, index, current, setStepActiveStatus, isStepActive, stateManager),
         nav: (first, last, valid, prev, next, finish) => 
             nav(first, last, valid, prev, next, finish),
     };
