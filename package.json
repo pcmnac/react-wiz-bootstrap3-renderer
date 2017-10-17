@@ -3,7 +3,7 @@
   "description": "Bootstrap 3 renderer for @pcmnac/react-wizard",
   "author": "Paulo Coutinho",
   "user": "pcmnac",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "start": "catalog start docs",
     "test": "jest",
