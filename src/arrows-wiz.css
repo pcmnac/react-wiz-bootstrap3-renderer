@@ -1,0 +1,186 @@
+fieldset legend {
+  text-transform: uppercase; }
+
+button {
+  text-transform: uppercase; }
+
+label.thin {
+  font-weight: normal; }
+
+fieldset legend {
+  font-size: 1.3em; }
+
+.siconv-table-header {
+  border-top: 4px solid #006CD4;
+  background-color: #EEEFF2;
+  color: #006CD4;
+  font-size: 1.05em; }
+
+.siconv-table-header thead > tr > th {
+  border-bottom: 0; }
+
+.table-caption {
+  display: block;
+  color: #006CD4;
+  text-transform: uppercase;
+  font-size: 1.05em;
+  margin-bottom: 5px; }
+
+.table-caption.searchable {
+  margin-bottom: -30px; }
+
+.line-button {
+  margin-bottom: -57px; }
+
+.actions-column span {
+  margin: 0 5px;
+  color: #006CD4;
+  cursor: pointer; }
+
+.table-sub-header {
+  font-weight: normal;
+  font-size: .9em; }
+
+.siconv-label-info {
+  font-weight: normal;
+  color: #006CD4; }
+
+.MapaBrasil path {
+  fill: #002A59; }
+
+.MapaBrasil path.selected {
+  fill: #006CD4; }
+
+.MapaBrasil text {
+  fill: #fff;
+  font: 12px Arial-BoldMT, sans-serif;
+  cursor: pointer; }
+
+.MapaBrasil a {
+  text-decoration: none; }
+
+.MapaBrasil a:hover {
+  cursor: pointer;
+  text-decoration: none; }
+
+.MapaBrasil a:hover path {
+  fill: #003B69 !important; }
+
+.MapaBrasil a:hover path.selected {
+  fill: #006CE7 !important; }
+
+.MapaBrasil .circle {
+  fill: #6677aa; }
+
+.MapaBrasil .circle.selected {
+  fill: #007CF7; }
+
+.MapaBrasil a:hover .circle {
+  fill: #7788bb !important;
+  cursor: pointer; }
+
+.ul-uf-selected {
+  list-style: none;
+  padding-left: 0;
+  color: #002A59;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2; }
+
+.ul-uf-selected li {
+  max-width: 30px;
+  margin: 0; }
+
+.uf-legend {
+  background-color: #003B69;
+  font-weight: normal;
+  font-family: Arial-BoldMT, sans-serif; }
+
+.uf-legend.selected {
+  background-color: #006CD4; }
+
+.ul-uf-selected li span.uf-legend.selected.badge {
+  background-color: #006CD4;
+  color: #FFF;
+  cursor: pointer; }
+
+.ul-uf-selected li span.uf-legend.badge {
+  background: none;
+  color: #000;
+  cursor: pointer; }
+
+.programa-siop-descricao {
+  background-color: #D9E9FD;
+  padding: 20px; }
+
+.programa-siop-descricao .title {
+  font-weight: bold;
+  color: #006CD4; }
+
+.nav-pills.nav-wizard > li {
+  position: relative;
+  overflow: visible;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent; }
+
+.nav-pills.nav-wizard > li + li {
+  margin-left: 0; }
+
+.nav-pills.nav-wizard > li:first-child {
+  border-left: 0; }
+
+.nav-pills.nav-wizard > li:first-child a {
+  border-radius: 5px 0 0 5px; }
+
+.nav-pills.nav-wizard > li:last-child {
+  border-right: 0; }
+
+.nav-pills.nav-wizard > li:last-child a {
+  border-radius: 0 5px 5px 0; }
+
+.nav-pills.nav-wizard > li a {
+  border-radius: 0;
+  background-color: #eee; }
+
+.nav-pills.nav-wizard > li:not(:last-child) a:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 19px 20px;
+  border-color: transparent transparent transparent #eee;
+  z-index: 150; }
+
+.nav-pills.nav-wizard > li:not(:first-child) a:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 19px 20px;
+  border-color: #eee #eee #eee transparent;
+  z-index: 150; }
+
+.nav-pills.nav-wizard > li:hover:not(:last-child) a:after {
+  border-color: transparent transparent transparent #aaa; }
+
+.nav-pills.nav-wizard > li:hover:not(:first-child) a:before {
+  border-color: #aaa #aaa #aaa transparent; }
+
+.nav-pills.nav-wizard > li:hover a {
+  background-color: #aaa;
+  color: #fff; }
+
+.nav-pills.nav-wizard > li.active:not(:last-child) a:after {
+  border-color: transparent transparent transparent #006CD4; }
+
+.nav-pills.nav-wizard > li.active:not(:first-child) a:before {
+  border-color: #006CD4 #006CD4 #006CD4 transparent; }
+
+.nav-pills.nav-wizard > li.active a {
+  background-color: #006CD4; }
