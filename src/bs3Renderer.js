@@ -6,7 +6,7 @@ const defaultOptions = {
     bsTabStyle: "pills",
 }
 
-export function createRenderer(userOptions) {
+export function createRenderer(userOptions = {}) {
 
     let options = {
         ...defaultOptions,
