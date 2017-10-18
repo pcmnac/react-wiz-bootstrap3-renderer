@@ -23,7 +23,7 @@
   "module": "dist-es6",
   "jsnext:main": "dist-es6",
   "devDependencies": {
-    "@pcmnac/react-wizard": "^0.0.6",
+    "@pcmnac/react-wizard": "^0.0.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
@@ -62,7 +62,7 @@
     "react": ">= 0.11.2 < 16.0.0",
     "react-bootstrap": "0.31.3",
     "rxjs": "^5.4.3",
-    "@pcmnac/react-wizard": "^0.0.6"
+    "@pcmnac/react-wizard": "^0.0.10"
   },
   "repository": {
     "type": "git",

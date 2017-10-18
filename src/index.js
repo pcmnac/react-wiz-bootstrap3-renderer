@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col, Nav, NavItem, Button, ButtonGroup, Badge, Glyphicon }  from 'react-bootstrap';
-import StepContainer from '@pcmnac/react-wizard';
+import { StepContainer } from '@pcmnac/react-wizard';
 
 const defaultOptions = {
     bsTabStyle: "pills",
@@ -23,7 +23,7 @@ export function createRenderer(userOptions = {}) {
         stepsContainer: (steps) => 
             stepsContainer(steps),
         step: (stepData, index, current, setStepActiveStatus, isStepActive, stateManager) =>
-            renderStep(stepData, index, current, setStepActiveStatus, isStepActive, stateManager),
+            step(stepData, index, current, setStepActiveStatus, isStepActive, stateManager),
         nav: (first, last, valid, prev, next, finish) => 
             nav(first, last, valid, prev, next, finish),
     };
@@ -84,7 +84,7 @@ function stepsContainer(steps) {
     );
 }
 
-function renderStep(step, index, current, setStepActiveStatus, isStepActive, stateManager) {
+function step(step, index, current, setStepActiveStatus, isStepActive, stateManager) {
 
     return (
         <div key={index} style={{display: index === current ? 'block' : 'none'}}>
