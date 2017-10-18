@@ -3,7 +3,7 @@
   "description": "Bootstrap 3 renderer for @pcmnac/react-wizard",
   "author": "Paulo Coutinho",
   "user": "pcmnac",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "start": "catalog start docs",
