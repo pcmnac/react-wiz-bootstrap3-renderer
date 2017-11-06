@@ -4,6 +4,7 @@ import { StepContainer } from '@pcmnac/react-wizard';
 
 const defaultOptions = {
     bsTabStyle: "pills",
+    justified: true,
 }
 
 export function createRenderer(userOptions = {}) {
@@ -27,6 +28,7 @@ export function createRenderer(userOptions = {}) {
         nav: (first, last, valid, prev, next, finish) => 
             nav(first, last, valid, prev, next, finish),
     };
+
 }
 
 export default createRenderer();
@@ -41,7 +43,7 @@ function wiz(tabs, content, nav) {
     );
 }
 
-function tabsContainer(tabs, style, justified = true) {
+function tabsContainer(tabs, style, justified) {
     return (
         <Nav bsStyle={style} className="nav-wizard" justified={justified}>{tabs}</Nav>
     );
