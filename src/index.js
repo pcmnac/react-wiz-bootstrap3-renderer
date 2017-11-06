@@ -17,7 +17,7 @@ export function createRenderer(userOptions = {}) {
         wiz: (tabs, content, nav) => 
             wiz(tabs, content, nav),
         tabsContainer: (tabs) => 
-            tabsContainer(tabs, options.bsTabStyle),
+            tabsContainer(tabs, options.bsTabStyle, options.justified),
         tab: (step, index, current, hideNumbers, changeStep) => 
             tab(step, index, current, hideNumbers, changeStep),
         stepsContainer: (steps) => 
@@ -41,9 +41,9 @@ function wiz(tabs, content, nav) {
     );
 }
 
-function tabsContainer(tabs, style) {
+function tabsContainer(tabs, style, justified = true) {
     return (
-        <Nav bsStyle={style} className="nav-wizard" justified={false}>{tabs}</Nav>
+        <Nav bsStyle={style} className="nav-wizard" justified={justified}>{tabs}</Nav>
     );
 }
 
