@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Row, Col, Nav, NavItem, Button, ButtonGroup, Badge, Glyphicon }  from 'react-bootstrap';
-import { StepContainer } from '@pcmnac/react-wizard';
 
 const defaultOptions = {
     bsTabStyle: "pills",
@@ -86,17 +85,18 @@ function stepsContainer(steps) {
     );
 }
 
-function step(step, index, current, setStepActiveStatus, isStepActive, stateManager) {
+function step(step, index, current, setStepActiveStatus, isStepActive, getStepState, errors) {
 
     return (
         <div key={index} style={{display: index === current ? 'block' : 'none'}}>
-            <StepContainer Component={step.component} 
+            <step.component 
                 key={index} index={index} 
                 valid={step.valid}
                 stepState={step.state}
                 isStepActive={isStepActive}
                 setStepActiveStatus={setStepActiveStatus}
-                stateManager={stateManager}
+                getStepState={getStepState}
+                errors={errors}
                 />
         </div>
     );
