@@ -85,7 +85,7 @@ function stepsContainer(steps) {
     );
 }
 
-function step(step, index, current, setStepActiveStatus, isStepActive, getStepState, errors) {
+function step(step, index, current, setStepActiveStatus, isStepActive, getStepState) {
 
     return (
         <div key={index} style={{display: index === current ? 'block' : 'none'}}>
@@ -96,7 +96,7 @@ function step(step, index, current, setStepActiveStatus, isStepActive, getStepSt
                 isStepActive={isStepActive}
                 setStepActiveStatus={setStepActiveStatus}
                 getStepState={getStepState}
-                errors={errors}
+                errors={step.errors}
                 />
         </div>
     );
