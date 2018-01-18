@@ -4,6 +4,12 @@ import { Grid, Row, Col, Nav, NavItem, Button, ButtonGroup, Badge, Glyphicon }  
 const defaultOptions = {
     bsTabStyle: "pills",
     justified: true,
+    disableOnInvalid: true,
+    labels: {
+        prev: "Previous",
+        next: "Next",
+        finish: "Finish",
+    },
 }
 
 export function createRenderer(userOptions = {}) {
@@ -25,7 +31,7 @@ export function createRenderer(userOptions = {}) {
         step: (stepData, index, current, setStepActiveStatus, isStepActive, stateManager) =>
             step(stepData, index, current, setStepActiveStatus, isStepActive, stateManager),
         nav: (first, last, valid, prev, next, finish) => 
-            nav(first, last, valid, prev, next, finish),
+            nav(first, last, valid, prev, next, finish, options),
     };
 
 }
@@ -49,8 +55,7 @@ function tabsContainer(tabs, style, justified) {
 }
 
 function tab(step, index, current, hideNumbers, changeStep) {
-
-    let numberBadge = hideNumbers ? null : <Badge>{step.number}</Badge>;
+    const numberBadge = hideNumbers ? null : <Badge>{step.number}</Badge>;
     let icon = <Glyphicon glyph="ok" style={{visibility: 'hidden'}} />;
 
     if (step.touched) {
@@ -86,7 +91,6 @@ function stepsContainer(steps) {
 }
 
 function step(step, index, current, setStepActiveStatus, isStepActive, getStepState) {
-
     return (
         <div key={index} style={{display: index === current ? 'block' : 'none'}}>
             <step.component 
@@ -102,23 +106,44 @@ function step(step, index, current, setStepActiveStatus, isStepActive, getStepSt
     );
 }
 
-function nav(first, last, valid, prev, next, finish) {
-
+function nav(
+    first,
+    last,
+    valid,
+    prev,
+    next,
+    finish,
+    {
+        disableOnInvalid,
+        labels,
+    }) {
     return (
         <fieldset>
             <legend></legend>
             <Row className="text-center">
-                <Button 
+                <Button
                     style={{display: first ? 'none' : 'inline-block',}}
-                    onClick={prev}><Glyphicon glyph="chevron-left" /> Anterior</Button>
+                    onClick={prev}
+                >
+                    <Glyphicon glyph="chevron-left" /> {labels.prev}
+                </Button>
                 {' '}
-                <Button disabled={!valid} bsStyle="primary"
+                <Button
+                    disabled={!valid && disableOnInvalid}
+                    bsStyle="primary"
                     style={{display: last ? 'none' : 'inline-block',}}
-                    onClick={next}>Próximo <Glyphicon glyph="chevron-right" /></Button> 
+                    onClick={next}
+                >
+                    {labels.next} <Glyphicon glyph="chevron-right" />
+                </Button> 
                 {' '}
-                <Button disabled={!valid} bsStyle="primary"
+                <Button 
+                    disabled={!valid && disableOnInvalid} bsStyle="primary"
                     style={{ display: last ? 'inline-block' : 'none', }}
-                    onClick={finish}>Concluir <Glyphicon glyph="ok" /></Button> 
+                    onClick={finish}
+                >
+                    {labels.finish} <Glyphicon glyph="ok" />
+                </Button> 
             </Row>
             <br/>
         </fieldset>

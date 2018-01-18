@@ -1,11 +1,5 @@
-// import React from 'react';
-// import {
-//   renderIntoDocument,
-//   findRenderedDOMComponentWithClass,
-//   findRenderedDOMComponentWithTag,
-//   Simulate
-// } from 'react-addons-test-utils';
 import { expect } from 'chai';
+import renderer from '../src';
 
 import * as bs3 from '../src';
 
