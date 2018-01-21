@@ -93,7 +93,8 @@ function stepsContainer(steps) {
 function step(step, index, current, setStepActiveStatus, isStepActive, getStepState) {
     return (
         <div key={index} style={{display: index === current ? 'block' : 'none'}}>
-            <step.component 
+            <step.component
+                {...step.initialProps}
                 key={index} index={index} 
                 valid={step.valid}
                 submitted={step.submitted}
@@ -102,7 +103,7 @@ function step(step, index, current, setStepActiveStatus, isStepActive, getStepSt
                 setStepActiveStatus={setStepActiveStatus}
                 getStepState={getStepState}
                 errors={step.errors}
-                />
+            />
         </div>
     );
 }
