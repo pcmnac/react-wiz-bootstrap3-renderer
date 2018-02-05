@@ -25,7 +25,7 @@ export function createRenderer(userOptions = {}) {
         tabsContainer: (tabs) => 
             tabsContainer(tabs, options.bsTabStyle, options.justified),
         tab: (step, index, current, hideNumbers, changeStep) => 
-            tab(step, index, current, hideNumbers, changeStep),
+            tab(step, index, current, hideNumbers, changeStep, options),
         stepsContainer: (steps) => 
             stepsContainer(steps),
         step: (stepData, index, current, setStepActiveStatus, isStepActive, stateManager) =>
@@ -54,11 +54,11 @@ function tabsContainer(tabs, style, justified) {
     );
 }
 
-function tab(step, index, current, hideNumbers, changeStep) {
+function tab(step, index, current, hideNumbers, changeStep, { disableOnInvalid }) {
     const numberBadge = hideNumbers ? null : <Badge>{step.number}</Badge>;
     let icon = <Glyphicon glyph="ok" style={{visibility: 'hidden'}} />;
 
-    if (step.touched) {
+    if (step.touched && (disableOnInvalid || step.submitted)) {
         if (step.valid) {
             icon = <Glyphicon glyph="ok" />;
         } else {

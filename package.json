@@ -26,7 +26,7 @@
     "main": "dist-modules",
     "module": "dist-es6",
     "jsnext:main": "dist-es6",
-        "devDependencies": {
+    "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.0.1",
